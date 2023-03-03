@@ -1,1 +1,68 @@
-Ejercicio 1.
+// Ejercicio 1.
+/*
+Vamos a practicar operaciones basicas con numeros.
+  a) Utilizando la sentencia while, imprima todos los numeros entre 2 variables "a"  y "b". Su codigo puede arrancar (por ejemplo):
+
+    int numeroInicio = 5;
+    int numeroFin = 14;
+
+    Se deberian mostrar los numeros: 5,6,7,8,9,10,11,12,13,14.
+
+  b) A lo anterior, solo muestre los numeros pares.
+  c) A lo anterior, con una variable extra, elija si se deben mostrar los numeros pares o impares.
+  d) Utilizando la sentencia for, hacer lo mismo que en (b) pero invirtiendo el orden.
+*/
+
+package clase1;
+
+public class ej1 {
+
+	public static void main(String args[]) {
+
+
+		System.out.println("********** PUNTO A **********");
+		int numeroInicio = 5;
+		int numeroFin = 14;
+
+		while(numeroInicio <=numeroFin){
+			System.out.print(numeroInicio+" ");
+			numeroInicio++;
+		}
+
+
+		System.out.println();
+		numeroInicio = 5;
+		System.out.println("********** PUNTO B **********");
+		while(numeroInicio <=numeroFin){
+			if (numeroInicio % 2 == 0)
+				System.out.print(numeroInicio+" ");
+			numeroInicio++;
+		}
+
+
+		System.out.println();
+		numeroInicio = 5;
+		System.out.println("********** PUNTO C **********");
+		boolean soloPares = false;
+		while(numeroInicio <=numeroFin){
+			if(soloPares) {
+				if (numeroInicio % 2 == 0)
+					System.out.print(numeroInicio+" ");
+				numeroInicio++;
+			}
+			else {
+				if(numeroInicio % 2 == 1)
+					System.out.print(numeroInicio+" ");
+				numeroInicio ++;
+			}
+		}
+
+		System.out.println();
+		System.out.println("********** PUNTO D **********");
+		for(int i = 14; i>=5; i--) {
+			System.out.print(i+ " ");
+		}
+
+
+	}
+}
